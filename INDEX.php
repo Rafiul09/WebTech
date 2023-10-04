@@ -1,5 +1,6 @@
 <?php 
-sess
+session_start();
+$_SESSION['message']="Invalid Credentials";
 ?>
 <!DOCTYPE html>
 <title>Index</title>
@@ -9,7 +10,7 @@ sess
     
         <fieldset style = "width:500px"  align="center">
             <legend>Login</legend>
-            <form method=POST action="reg.php">
+            <form method=POST >
             <table align="center">
                 <tr>
                     <td>Username</td>
@@ -22,14 +23,35 @@ sess
             </table>
             <hr rowspan = "50">
                 <input type="submit" name="Log" value ="Login"  align="center">
-                <?php 
-                  if (isset($_POST['log']) && Uname==Pass) 
-                  {
-                    
-                  }
-                ?>
+                <input type="submit" name="reg" value ="Signup"  align="center">
+                
                 </form>
-                <form method=GET action="reg.php"><input type="submit" name="reg" value ="Signup"  align="center"></form>
+                <?php 
+                  if ( isset($_POST['Log'])) 
+                  {
+                    if(!empty($_POST['Uname'])&& !empty($_POST['Pass'])) 
+                    {
+                        if($_POST['Uname']== $_POST['Pass']) 
+                        {
+                            
+                            header("Location: reg.php");
+                            exit();
+                        } 
+                        elseif ($_POST['Uname']!= $_POST['Pass']) {
+                            echo "Invalid Credentials";
+                        }
+                     }
+
+                    
+                 
+                   
+                  
+                  }
+                 # else if (isset($_POST['log']) && (isset($_POST['uname'])  isset($_POST['password'])))
+                  #{
+                   #print_r($_SESSION);
+                  #}
+                ?>
                 
         </fieldset>
     
