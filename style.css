@@ -1,0 +1,544 @@
+/*======= Google fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*======= Main Css =======*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*body {
+    background: #ffffff;
+}
+*/
+.mt-20px {
+    margin-top: 20px;
+}
+*border {
+    border-right: 1px solid rgba(255 255 255 / 0.4);
+}
+.btn-green {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    padding: 4px 10px;
+
+    position: relative;
+    border: 1px solid #01ca8b;
+    box-shadow: 0 0 0 4em #01ca8b inset;
+    transition: all 350ms ease;
+}
+
+.btn-green i {
+    margin-right: 6px;
+}
+.btn-green:hover {
+    box-shadow: 0 0 0 0 #01ca8b inset;
+    background: #fff;
+    color: #01ca8b;
+}
+.btn-transparent {
+    border: 1px solid #fff;
+}
+.btn-white {
+    background: #fff;
+    color: #01ca8b;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 4px 10px;
+}
+.btn-white i {
+    margin-right: 4px;
+}
+
+/*====x button=====*/
+.close-btn {
+    position: relative;
+    left: -10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: -12px;
+    color: #999;
+    font-weight: bold;
+    font-size: 16px;
+    display: none;
+    z-index: 9999;
+}
+
+.close-btn:hover {
+    color: #000; /* Change color on hover if needed */
+}
+
+/* Show the clear button when input has content */
+.search input[type="text"]:not(:placeholder-shown) + .btn-clear {
+    display: block;
+}
+/*======= Header navigation bar =======*/
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+header .nav-bar {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    height: 4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.5s ease;
+}
+
+.nav-bar ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+    align-items: center;
+    vertical-align: middle;
+    list-style-type: none;
+}
+
+.ui-menu {
+    z-index: 9999 !important;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.search input[type="text"] {
+    width: 300px;
+    height: 33px;
+    padding: 10px;
+    z-index: 9999;
+    border: 1px solid #ccc;
+}
+.nav-bar .logo {
+    color: #0e0d0d;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*======= navi item underline =======*/
+.navigation .nav-items a {
+    color: #000000;
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+    margin: 100px auto;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation .nav-items a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: #272727;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0);
+}
+
+.navigation .nav-items a:hover::before {
+    transform: scaleX(1);
+}
+
+.navigation .nav-items a:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation .nav-items a i {
+    display: none;
+}
+
+/*======= Home =======*/
+section {
+    position: relative;
+    font-size: 1em;
+    padding: 30px 150px;
+    transition: 0.5s ease;
+    transition-property: padding;
+}
+
+.home {
+    /*position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 16em 0 14em;
+    box-shadow: -5px -5px 30px 5px #e1f3ff 5px 5px 30px 5px #e1f3ff;
+*/
+    position: relative;
+    min-height: 10vh;
+    background: url(resources/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home:before {
+    z-index: 888;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(transparent, #ffffff);
+    bottom: 0;
+    left: 0;
+}
+
+.home h1 {
+    position: relative;
+    top: 500px;
+    color: rgba(1, 0, 0, 0.915);
+    height: 90px;
+    font-size: 4em;
+    font-weight: 600;
+    margin: 0 10px;
+}
+.service {
+    position: relative;
+    top: 0px;
+    width: 1100px;
+    border-radius: 10px;
+    background: #708b8c45;
+    border: 1px solid #dfdfdf94;
+    margin-top: 500px;
+}
+.service a {
+    display: inline-block;
+    width: 33%;
+    color: #1d0808;
+    font-size: 30px;
+    font-weight: 800;
+    border-right: 1px solid #fff;
+    padding: 35px 20px;
+    margin: 0 -2px;
+    height: 180px;
+    vertical-align: top;
+}
+
+.service a:last-child {
+    border-right: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 34.2%;
+}
+
+.service-content {
+    width: calc(100%-47px);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.service-content::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: #272727;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0);
+}
+.service-content:hover::before {
+    transform: scaleX(1);
+}
+.callnum p {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.callnum h3 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/*======= Booking =======*/
+
+.work {
+    position: relative;
+
+    right: 100px;
+}
+.hour {
+    background: #01ca8b;
+    border-radius: 10px;
+    padding: 40px 50px;
+}
+.hour h2 {
+    color: #fff;
+    font-weight: 900;
+    margin: 0 0 30px;
+}
+.time {
+    border-top: 1px solid rgba(255 255 255 / 0.52);
+    padding: 30px 0;
+}
+.time:last-child {
+    padding-bottom: 0;
+}
+.time h4,
+.time p {
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+}
+.booking {
+    display: inline-block;
+    width: 33%;
+    margin-left: -4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/*======= Content section =======*/
+.content h1 {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 600;
+}
+
+.content p {
+    color: #fff;
+    font-size: 1em;
+    margin: 30px 0;
+}
+
+/*======= Scroll bar =======*/
+::-webkit-scrollbar {
+    background: #fff;
+    width: 11px;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #282f4e;
+    width: 100%;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #454f6d;
+}
+
+section {
+    min-height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*section .container {
+    margin: 100px;
+}
+*/
+section h1 {
+    font-size: 60px;
+}
+
+section h2 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards {
+    display: flex;
+}
+
+section .cards .text-card {
+    background: #2696e9;
+    margin: 20px;
+    padding: 20px;
+}
+
+section .cards .text-card h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 40px;
+    }
+
+    section .cards {
+        flex-direction: column;
+    }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.nav-close-btn,
+.nav-menu-btn {
+    display: none;
+}
+
+/*======= Media queries (max-width: 1100px) =======*/
+@media screen and (max-width: 1100px) {
+    header .nav-bar {
+        padding: 0 50px;
+    }
+
+    section {
+        padding: 30px 50px;
+        font-size: 0.9em;
+    }
+}
+
+/*=====table======*/
+table.prinfo0 {
+    width: 500px;
+
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* Style for table headers */
+table.prinfo0 th {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style for table data cells */
+table.prinfo0 td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Center align the content */
+table.prinfo0 td,
+table.prinfo0 th {
+    text-align: left;
+}
+
+/* Style for the h2 heading */
+table.prinfo0 h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+/*======= Media queries (max-width: 850px) =======*/
+@media screen and (max-width: 850px) {
+    header .nav-bar {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 30px 20px;
+        font-size: 0.8em;
+    }
+
+    /*======= Navigation menu =======*/
+    .nav-menu-btn {
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .navigation {
+        z-index: 99999;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navigation .nav-items {
+        position: relative;
+        background: #fff;
+        width: 400px;
+        max-width: 400px;
+        display: grid;
+        place-content: center;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+        transform: translateY(-200px);
+        transition: 0.3s ease;
+    }
+
+    .navigation.active .nav-items {
+        transform: translateY(0);
+    }
+
+    .navigation .nav-items a {
+        color: #222;
+        font-size: 1em;
+        margin: 15px 50px;
+    }
+
+    .navigation .nav-items a i {
+        display: inline-block;
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
+
+    .nav-close-btn {
+        display: block;
+        color: #222;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3em;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
